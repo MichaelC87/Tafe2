@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>check button</title>
+</head>
+
+<body>
+	
+	<form>
+		<input type="checkbox" onClick="enableButton()" id="check">
+		<input type="button" value="pressme" id="btn" disabled>
+	</form>
+
+	<style>
+	
+		input[type="button"] {
+			box-shadow: 1em 1em 1em gray;
+			pointer-events: none;
+			color: gray;
+		}
+		
+		input[type="checkbox"] {
+			box-shadow: 1em 1em 1em gray;
+		}
+		
+		input[type="checkbox"] :checked +
+		input[type="button"] {
+			
+		}
+	
+	</style>
+	
+	<script>
+	
+		function enableButton() {
+			if(check.checked == true) {
+				btn.disabled = true;
+			} else {
+				btn.disabled = false;
+			}
+		}
+	
+	</script>
+	
+</body>
+</html>
